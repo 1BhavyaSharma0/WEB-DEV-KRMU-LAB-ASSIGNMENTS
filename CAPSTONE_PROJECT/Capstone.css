@@ -1,20 +1,16 @@
-/* --- CSS Variables & Base Styles (Relative Units) --- */
+
 :root {
-    /* NEW COLOR PALETTE: #232020, #553739, #955e42, #9c914f, #748e54 */
-    --primary-color: #955e42;   /* Medium Brown/Sienna - Used for buttons, highlights, main links */
-    --secondary-color: #748e54; /* Muted Green/Sage - Used for secondary text/buttons */
-    --accent-color: #9c914f;    /* Muted Yellow/Olive - Used for hover/interaction */
-    --dark-text: #232020;       /* Very Dark Gray/Black - Used for headings/main text */
-    --dark-bg: #232020;         /* Used for dark sections/footer */
-    --light-bg: #f8f9fa;        /* Light Background for contrast */
-    
-    /* Relative Spacing Units (rem) */
+    --primary-color: #955e42;  
+    --secondary-color: #748e54; 
+    --accent-color: #9c914f;    
+    --dark-text: #232020;      
+    --dark-bg: #232020;         
+    --light-bg: #f8f9fa;       
     --spacing-xs: 0.5rem;
     --spacing-sm: 1rem;
     --spacing-md: 2rem;
     --spacing-lg: 4rem;
-    
-    font-size: 16px; /* Base for rem units */
+     font-size: 16px; 
 }
 
 * {
@@ -35,7 +31,7 @@ h2 { color: var(--dark-text); font-size: 2rem; margin-bottom: var(--spacing-md);
 h3 { color: var(--dark-text); font-size: 1.25rem; }
 
 section {
-    padding: var(--spacing-lg) 10vw; /* Using vw for horizontal padding */
+    padding: var(--spacing-lg) 10vw; 
 }
 
 a {
@@ -47,8 +43,6 @@ a {
 a:hover {
     color: var(--accent-color);
 }
-
-/* Skip Link for Accessibility */
 .skip-link {
     position: absolute;
     top: -40px;
@@ -63,8 +57,6 @@ a:hover {
 .skip-link:focus {
     top: 0;
 }
-
-/* --- Navigation & Header (Flexbox) --- */
 .main-header {
     display: flex;
     justify-content: space-between;
@@ -136,15 +128,13 @@ a:hover {
 }
 
 .menu-toggle {
-    display: none; /* Hidden on desktop */
+    display: none; 
     font-size: 1.5rem;
     cursor: pointer;
 }
 
-/* --- Hero Section --- */
 .hero-section {
     text-align: center;
-    /* Soft background gradient using secondary colors */
     background: linear-gradient(180deg, var(--light-bg) 0%, #edebe8 100%);
 }
 
@@ -163,7 +153,6 @@ a:hover {
     color: var(--secondary-color);
 }
 
-/* Keyframe Animation */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
@@ -183,7 +172,7 @@ a:hover {
     padding: var(--spacing-sm) 1.5rem;
     border: 1px solid #ccc;
     border-radius: 0.5rem;
-    width: 25rem; /* Specific width */
+    width: 25rem;
     font-size: 1rem;
 }
 
@@ -195,8 +184,6 @@ a:hover {
 .btn-primary:hover {
     background-color: var(--accent-color);
 }
-
-/* --- Categories Section (CSS Grid) --- */
 .categories-section {
     text-align: center;
     background-color: white;
@@ -204,7 +191,6 @@ a:hover {
 
 .category-grid {
     display: grid;
-    /* Responsive Grid layout */
     grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr)); 
     gap: var(--spacing-md);
     max-width: 60rem;
@@ -229,8 +215,6 @@ a:hover {
     font-size: 2rem;
     margin-bottom: var(--spacing-sm);
 }
-
-/* --- Featured Courses Section (CSS Grid) --- */
 .courses-section {
     background-color: var(--light-bg);
 }
@@ -251,7 +235,6 @@ a:hover {
 
 .course-grid {
     display: grid;
-    /* Grid layout for 3 columns on desktop */
     grid-template-columns: repeat(3, 1fr);
     gap: var(--spacing-md);
 }
@@ -270,7 +253,7 @@ a:hover {
 
 .course-card img {
     width: 100%;
-    height: 12rem; /* Fixed height for consistency */
+    height: 12rem;
     object-fit: cover;
 }
 
@@ -294,8 +277,6 @@ a:hover {
     color: var(--primary-color);
     margin-top: var(--spacing-sm);
 }
-
-/* --- Contact/Inquiry Form --- */
 .contact-section {
     text-align: center;
 }
@@ -343,10 +324,8 @@ a:hover {
 }
 
 .btn-secondary:hover {
-    background-color: #5d7448; /* Darker sage green */
+    background-color: #5d7448; 
 }
-
-/* --- Footer --- */
 .main-footer {
     background-color: var(--dark-bg);
     color: var(--light-bg);
@@ -355,13 +334,13 @@ a:hover {
 
 .footer-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 columns on desktop */
+    grid-template-columns: repeat(4, 1fr); 
     gap: var(--spacing-md);
     margin-bottom: var(--spacing-md);
 }
 
 .footer-grid h4 {
-    color: var(--primary-color); /* Highlight footer headings */
+    color: var(--primary-color); 
     margin-bottom: var(--spacing-sm);
 }
 
@@ -378,84 +357,61 @@ a:hover {
 .copyright {
     text-align: center;
     padding-top: var(--spacing-md);
-    border-top: 1px solid #454040; /* Darker divider line */
+    border-top: 1px solid #454040; 
     font-size: 0.875rem;
 }
-
-/* ==================================== */
-/* 5. Responsive Design (Media Queries) */
-/* ==================================== */
-
-/* Tablet (≤ 768px) */
 @media (max-width: 768px) {
     
-    /* General Adjustments */
     section {
-        padding: var(--spacing-md) 5vw; /* Reduced horizontal padding */
+        padding: var(--spacing-md) 5vw;
     }
 
     h1 { font-size: 2.5rem; }
     h2 { font-size: 1.75rem; }
-
-    /* Header/Navigation Adjustments */
     .main-nav, .auth-buttons {
-        display: none; /* Hide for mobile toggle */
+        display: none;
     }
 
     .menu-toggle {
-        display: block; /* Show hamburger icon */
+        display: block;
     }
     
     .main-header {
         padding: var(--spacing-sm) 5vw;
     }
-
-    /* Hero Section Adjustments */
     .hero-search {
-        flex-direction: column; /* Stack search elements */
+        flex-direction: column;
     }
     
     .hero-search input {
         width: 100%;
         max-width: 25rem;
     }
-
-    /* Categories Grid stacks to 2 columns */
     .category-grid {
         grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
     }
-
-    /* Courses Grid stacks to 2 columns */
     .course-grid {
         grid-template-columns: repeat(2, 1fr);
     }
     
-    /* Footer Grid stacks to 2 columns */
     .footer-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
-
-/* Mobile (≤ 480px) */
 @media (max-width: 480px) {
-    
-    /* General Adjustments */
+ 
     h1 { font-size: 2rem; }
     h2 { font-size: 1.5rem; }
     
-    /* Categories Grid stacks to 1 column */
     .category-grid {
         grid-template-columns: 1fr;
     }
-    
-    /* Courses Grid stacks to 1 column */
     .course-grid {
         grid-template-columns: 1fr;
     }
-    
-    /* Footer Grid stacks to 1 column */
     .footer-grid {
         grid-template-columns: 1fr;
         text-align: center;
     }
+
 }
