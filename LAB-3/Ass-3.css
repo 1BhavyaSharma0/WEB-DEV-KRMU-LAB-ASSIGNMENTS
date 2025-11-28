@@ -1,11 +1,11 @@
-/* Base Styles & Relative Units */
+/* CSS USED  */
 :root {
-    /* Define base font size for rem units */
+    
     font-size: 16px;
-    --primary-color: #007BFF; /* A consistent main blue color */
+    --primary-color: #007BFF;
     --dark-bg: #212529;
     --light-text: #f8f9fa;
-    --padding-section: 4rem; /* 64px, using rem for scaling */
+    --padding-section: 4rem; 
 }
 
 body {
@@ -18,7 +18,6 @@ body {
 }
 
 section {
-    /* Using vw (viewport width) for horizontal padding and rem for vertical */
     padding: var(--padding-section) 10vw; 
 }
 
@@ -27,11 +26,9 @@ h1, h2, h3 {
 }
 
 h2 {
-    font-size: 2.5rem; /* Relative unit */
+    font-size: 2.5rem;
     margin-bottom: 2rem;
 }
-
-/* 1. Header & Navigation (Uses Flexbox) */
 .header {
     display: flex;
     justify-content: space-between;
@@ -54,15 +51,13 @@ h2 {
     text-decoration: none;
     margin-left: 1.5rem;
     padding: 0.5rem 0;
-    transition: color 0.3s, border-bottom 0.3s; /* CSS Transition */
+    transition: color 0.3s, border-bottom 0.3s; 
 }
 
-.nav-links a:hover { /* Hover Effect */
+.nav-links a:hover { 
     color: #ffc107; 
     border-bottom: 2px solid #ffc107;
 }
-
-/* 2. Hero Section (Uses Flexbox) */
 .hero {
     background-color: var(--light-text);
     display: flex;
@@ -84,52 +79,44 @@ h2 {
 
 .developer-title {
     font-size: 4rem;
-    /* Primary color for the rest of the text */
     color: var(--primary-color); 
     margin: 0.5rem 0 1rem 0;
-    /* Removed animation from the parent class */
 }
 
-/* Specific styling for the orange text */
 .developer-title .highlight-orange {
-    color: #ff8c00; /* Bright orange color */
-    animation: none; /* Override animation from the parent class */
-}
+    color: #ff8c00;
+    animation: none; 
 
 .hero-image {
     max-width: 40%;
 }
 
-/* Styling for the actual image to make it a perfect circle */
+
 .profile-img {
-    width: 20rem; /* Fixed width */
-    height: 20rem; /* Fixed height to keep it square before border-radius */
-    object-fit: cover; /* Ensures the image covers the area without distortion */
-    border-radius: 50%; /* Makes the image circular */
+    width: 20rem; 
+    height: 20rem; /
+    object-fit: cover; 
+    border-radius: 50%;
     border: 5px solid var(--primary-color); 
     display: block; 
     margin: 0 auto; 
-    transition: transform 0.5s ease-in-out; /* CSS Transition */
+    transition: transform 0.5s ease-in-out; 
 }
 
 .profile-img:hover {
-    transform: scale(1.05); /* Transform effect */
+    transform: scale(1.05);
 }
 
-
-/* --- About Section --- */
 .about {
     background-color: #ffffff;
 }
 
-/* 3. Skills Section (Uses CSS Grid) */
 .skills {
     background-color: #f1f1f1;
 }
 
 .skills-grid {
     display: grid;
-    /* Grid layout with responsive columns */
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
     gap: 1.5rem;
 }
@@ -143,12 +130,10 @@ h2 {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.skill-card:hover { /* Hover Effect */
+.skill-card:hover { 
     transform: translateY(-0.5rem);
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
-
-/* --- Projects Section --- */
 .projects {
     background-color: #ffffff;
 }
@@ -161,18 +146,16 @@ h2 {
     transition: border-color 0.3s ease;
 }
 
-.project-card:hover { /* Hover Effect */
+.project-card:hover { 
     border-color: var(--primary-color);
     box-shadow: 0 0 1rem rgba(0, 123, 255, 0.1);
 }
 
-/* --- Contact Section (Card style) --- */
 .contact {
     background-color: #f1f1f1; 
     text-align: center;
 }
 
-/* Style the Contact Me heading slightly outside the card */
 .contact h2 {
     text-align: left; 
     padding-left: 10vw; 
@@ -180,7 +163,6 @@ h2 {
 }
 
 .contact-form {
-    /* White card styling */
     max-width: 30rem;
     margin: 0 auto;
     background-color: white;
@@ -230,12 +212,10 @@ h2 {
 .submit-btn:hover {
     background-color: #0b5ed7; 
 }
-
-/* --- Footer (Blue Bar) --- */
 .footer {
     text-align: center;
     padding: 1.5rem 10vw; 
-    background-color: #0d6efd; /* Match the darker blue bar in the image */
+    background-color: #0d6efd; 
     color: var(--light-text);
     font-size: 0.875rem;
     
@@ -244,15 +224,12 @@ h2 {
     margin: 0;
 }
 
-/* --- Back to Top Button --- */
+
 .back-to-top {
-    /* Positioning */
     position: fixed;
     right: 2rem; 
     bottom: 2rem; 
     z-index: 9999; 
-
-    /* Appearance */
     background-color: var(--primary-color);
     color: var(--light-text);
     text-decoration: none;
@@ -260,8 +237,6 @@ h2 {
     border-radius: 0.25rem;
     font-size: 0.9rem;
     display: inline-block;
-    
-    /* Transitions and Effects */
     transition: background-color 0.3s ease, opacity 0.3s ease;
     border: 1px solid #0056b3; 
 }
@@ -272,12 +247,9 @@ h2 {
 }
 
 
-/* --- Responsive Design (Media Queries) --- */
 @media (max-width: 768px) {
-    
-    /* Responsive adjustment for Hero section */
     .hero {
-        flex-direction: column; /* Stack image and text */
+        flex-direction: column; 
         text-align: center;
         padding-top: 4rem;
         padding-bottom: 4rem;
@@ -288,11 +260,9 @@ h2 {
     }
 
     .hero-image {
-        order: -1; /* Place image above text on mobile */
+        order: -1;
         margin-bottom: 2rem;
     }
-
-    /* Adjust image size for mobile */
     .profile-img {
         width: 15rem;
         height: 15rem;
@@ -307,33 +277,28 @@ h2 {
         font-size: 3rem;
     }
     
-    /* General section padding adjustment */
     section {
         padding: 3rem 5vw;
     }
 
-    /* Skills Grid stacks in one column on smaller screens */
     .skills-grid {
         grid-template-columns: 1fr;
     }
     
-    /* Navigation adjustments for smaller screens */
     .nav-links a {
         margin-left: 1rem;
         font-size: 0.9rem;
     }
-    
-    /* Center Contact Me heading on mobile */
+   
     .contact h2 {
         text-align: center; 
         padding-left: 0;
     }
-    
-    /* Reduce back-to-top button size on mobile */
     .back-to-top {
         right: 1rem;
         bottom: 1rem;
         padding: 0.5rem 0.75rem;
         font-size: 0.8rem;
     }
+
 }
